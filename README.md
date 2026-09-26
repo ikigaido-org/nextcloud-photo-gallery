@@ -63,6 +63,8 @@ The regular Nextcloud URL works without an additional proxy. For a separate gall
 
 [Ikigaido](https://ikigaido.ch) is a non-profit association. We develop and maintain Photo Gallery in our free time. Contributions of code, documentation, testing and security research are welcome.
 
+To support development, you can [sponsor Stephan Rickauer on GitHub](https://github.com/sponsors/star26bsd).
+
 This app primarily serves our association’s needs, and we intend to keep developing the features we use. Bug reports and feature requests are welcome. Small, focused contributions that also help our workflow are especially welcome.
 
 The scope is deliberately limited: we do not aim to cover every gallery use case. Please open an issue before starting a substantial change so we can discuss whether it fits.
