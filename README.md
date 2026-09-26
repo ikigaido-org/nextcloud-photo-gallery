@@ -17,7 +17,7 @@ After exploring options in the Nextcloud ecosystem, we chose to build directly o
 ## Features
 
 - Public album overview with covers, year and location filters, and configurable sorting.
-- Responsive album pages with a lightGallery photo and video viewer and selectable information fields.
+- Responsive album pages with a [lightGallery](https://www.lightgalleryjs.com/) photo and video viewer and selectable information fields.
 - Create a Photos album from a folder through the Files menu, with optional subfolders.
 - Optional switching from a personal account to a shared gallery account.
 - Configurable titles, colours, backgrounds, footer and heading font.
