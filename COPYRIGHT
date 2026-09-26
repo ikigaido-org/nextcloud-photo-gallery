@@ -1,0 +1,8 @@
+Photo Gallery — a public photo album overview for Nextcloud, built on Nextcloud Photos.
+
+Copyright (C) 2026 Stephan Rickauer
+
+The application's own code is licensed under the GNU Affero General Public License,
+version 3 only (SPDX-License-Identifier: AGPL-3.0-only). See LICENSE.
+
+Third-party components retain their respective copyrights and licenses.
