@@ -58,7 +58,7 @@ This app primarily serves our association’s needs, and we intend to keep devel
 
 The scope is deliberately limited: we do not aim to cover every gallery use case. Please open an issue before starting a substantial change so we can discuss whether it fits.
 
-JavaScript build instructions are in [src/README.md](src/README.md). An automated test suite is not yet included in this repository.
+JavaScript build instructions are in [src/README.md](src/README.md).
 
 ## License
 
