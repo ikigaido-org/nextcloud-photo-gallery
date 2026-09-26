@@ -36,7 +36,7 @@ The current app targets **Nextcloud 33** and **PHP 8.2 or newer**. Enable the Ne
 
 The overview makes the selected accounts’ existing public albums discoverable together. Private albums are excluded. Creating an album from a folder does not automatically publish it or keep its membership synchronized with later folder changes.
 
-For an existing installation, update the same `photo_gallery` app without uninstalling it. See the [0.8.7 update notes](docs/changes-0.8.7.md), including how to retain texts previously supplied by built-in defaults.
+For an existing installation, update the same `photo_gallery` app without uninstalling it.
 
 ## Working together
 
