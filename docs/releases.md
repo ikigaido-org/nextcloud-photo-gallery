@@ -1,23 +1,30 @@
 # Packaging and releases
 
-The Tests workflow runs PHP checks and creates an AppDrop ZIP on pull requests, pushes to `main`, and version tags. No Nextcloud server or JavaScript rebuild is required; the package uses the committed prebuilt JavaScript.
+The Tests workflow runs PHP checks and creates an AppDrop ZIP on pull requests, pushes to `main`, version tags and manual runs. No Nextcloud server or JavaScript rebuild is required; the package uses the committed prebuilt JavaScript.
 
 ## Test a package
 
 Open the successful workflow run and download the **appdrop-package** artifact. Extract the GitHub artifact download once to obtain `photo-gallery-VERSION.zip`. Upload that inner ZIP to AppDrop. It contains the required `photo_gallery/` root folder.
 
-Artifacts are kept for seven days. They do not create or publish a release.
+Artifacts are kept for seven days. Pull requests and ordinary pushes to `main` do not create a release.
 
-## Create a release
+## Create a release in the GitHub website
 
 1. Set the version in `appinfo/info.xml` through a PR and merge it after checks pass. The current version is `0.8.7`.
-2. Tag the intended merged commit as `v0.8.7` and push that tag. Do not publish a GitHub release manually first; CI creates the draft.
-3. CI reruns the checks, confirms that the tag matches the app version, packages the ZIP and attaches it to a **draft release**.
-4. Download the ZIP from the draft release and test it with AppDrop. Review the release notes, then publish the draft when ready.
+2. Open **Actions → Tests → Run workflow**, select **main**, and click **Run workflow**.
+3. CI runs the checks and packages the ZIP. It creates the matching version tag (for example `v0.8.7`) at the exact commit tested, then creates a **draft release** with the ZIP attached.
+4. Open **Releases** and the draft. Download the attached ZIP and test it with AppDrop.
+5. Edit the draft, review the release notes and click **Publish release** when ready.
 
-For later releases, use the corresponding version and tag. CI does not deploy the app or publish the draft automatically. If a release already exists for the tag, creation fails rather than replacing its assets.
+Manual release runs are restricted to `main`. An existing tag is reused only if it points directly to the exact commit being tested; it is never moved. Existing releases are not overwritten. If a run fails after creating the tag but before creating a release, rerun its failed jobs from that same run.
 
-The existing **PHP checks** branch-protection check also covers packaging. Only the tag-triggered draft-release job has repository write permission.
+CI does not deploy the app or publish the draft automatically.
+
+## Alternatively: push a version tag
+
+Pushing a tag such as `v0.8.7` also runs the checks and creates the draft release. The tag must match `appinfo/info.xml`. Do not create the release manually first; CI creates it.
+
+The existing **PHP checks** branch-protection check also covers packaging. Only the draft-release job has repository write permission.
 
 ## Local packaging
 

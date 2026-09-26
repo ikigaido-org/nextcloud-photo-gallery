@@ -45,4 +45,8 @@ with zipfile.ZipFile(output) as archive:
     if packaged_info.findtext('version') != version:
         raise SystemExit('Packaged app version does not match the ZIP filename.')
 
+if os.environ.get('GITHUB_OUTPUT'):
+    with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as outputs:
+        outputs.write(f'release_tag=v{version}\n')
+
 print(f'Created {output.name} ({output.stat().st_size:,} bytes)')
