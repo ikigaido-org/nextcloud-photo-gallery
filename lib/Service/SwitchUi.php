@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+// SPDX-FileCopyrightText: 2026 Stephan Rickauer
 // SPDX-License-Identifier: AGPL-3.0-only
 namespace OCA\PhotoGallery\Service;
 use OCP\IURLGenerator;

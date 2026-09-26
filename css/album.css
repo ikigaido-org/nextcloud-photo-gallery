@@ -1,3 +1,4 @@
+/*! SPDX-FileCopyrightText: 2026 Stephan Rickauer */
 /* SPDX-License-Identifier: AGPL-3.0-only */
 .pg-back{display:inline-block;margin:0 0 28px;color:var(--mpi-navigation,var(--mpi-text,inherit));text-decoration:none;padding:12px 0;min-height:44px}
 .pg-back:hover{text-decoration:underline}.pg-media-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}

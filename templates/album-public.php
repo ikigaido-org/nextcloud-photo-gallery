@@ -1,2 +1,3 @@
-<?php // SPDX-License-Identifier: AGPL-3.0-only
+<?php // SPDX-FileCopyrightText: 2026 Stephan Rickauer
+// SPDX-License-Identifier: AGPL-3.0-only
 require __DIR__.'/album-assets.php'; require __DIR__.'/album-content.php';

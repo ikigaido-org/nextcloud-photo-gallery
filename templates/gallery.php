@@ -1,4 +1,5 @@
 <?php
+// SPDX-FileCopyrightText: 2026 Stephan Rickauer
 // SPDX-License-Identifier: AGPL-3.0-only
 ?>
 <main class="pg-caption-<?php p($_['captionMode']); ?> mpi-gallery<?php if ($_['showHeader']): ?> mpi-native<?php endif; ?>" aria-labelledby="mpi-title">

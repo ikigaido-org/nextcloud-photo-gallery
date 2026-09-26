@@ -1,4 +1,5 @@
-<?php // SPDX-License-Identifier: AGPL-3.0-only ?>
+<?php // SPDX-FileCopyrightText: 2026 Stephan Rickauer
+// SPDX-License-Identifier: AGPL-3.0-only ?>
 <main class="mpi-gallery<?php if ($_['showHeader']): ?> mpi-native<?php endif; ?>" id="pg-album" data-api="<?php p($_['apiUrl']); ?>" data-placeholder="<?php p($_['assetBase'].'img/photo-placeholder.svg'); ?>" data-available="<?php p($_['available']?'1':'0'); ?>">
 <a class="pg-back" href="<?php p($_['backUrl']); ?>">← Zur Albumübersicht</a>
 <header class="mpi-heading<?php if($_['embed']): ?> pg-visually-hidden<?php endif; ?>"><h1 id="mpi-title"><?php p($_['title']); ?></h1>

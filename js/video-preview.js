@@ -1,3 +1,4 @@
+/*! SPDX-FileCopyrightText: 2026 Stephan Rickauer */
 /* SPDX-License-Identifier: AGPL-3.0-only */
 // Optional browser poster extraction when Nextcloud has no video preview.
 // One decoder at a time; no server binary, permanent copies or uploads.
