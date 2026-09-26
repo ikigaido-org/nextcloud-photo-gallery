@@ -30,8 +30,8 @@ Video playback depends on browser support for the original format; the app delib
 The current app targets **Nextcloud 33** and **PHP 8.2 or newer**. Enable the Nextcloud **Photos** app and public album sharing. The interface currently uses German labels.
 
 1. Install Photo Gallery using AppDrop with an app ZIP containing a top-level `photo_gallery/` folder. When packaging this repository, put the app files directly inside that folder. Prebuilt JavaScript is included.
-2. In Nextcloud’s administration settings, open **Öffentliche Galerie**.
-3. Enter the album owners’ account IDs, configure the title and appearance, and enable **Übersicht öffentlich aktivieren**. An empty owner list includes public albums from all active accounts.
+2. In Nextcloud’s administration settings, open **Public gallery** (German UI: **Öffentliche Galerie**).
+3. Enter the album owners’ account IDs, configure the title and appearance, and enable **Publish the overview** (**Übersicht öffentlich aktivieren**). An empty owner list includes public albums from all active accounts.
 4. Create albums and share them publicly through Photos. The overview is available at `/apps/photo_gallery/`.
 
 The overview makes the selected accounts’ existing public albums discoverable together. Private albums are excluded. Creating an album from a folder does not automatically publish it or keep its membership synchronized with later folder changes.
@@ -40,9 +40,11 @@ For an existing installation, update the same `photo_gallery` app without uninst
 
 ## Working together
 
-Our workflow uses one shared account as the album owner. Selected people can switch to that account from their own login through the Nextcloud profile menu, edit albums and return to their personal account. The gallery’s global configuration remains in the administration settings.
+Photos’ album ownership and collaboration model did not meet our need for a group of editors to maintain the same public gallery. The shared gallery account is a workaround for that limitation: it provides a common owner for the albums, while the account switcher lets selected people work as that owner from their personal login.
 
-To enable this, configure **Galeriekonto für den Kontowechsel**, activate **Nur für ausgewählte Konten oder Gruppen**, and list the permitted users or groups. Use an active account without administration rights, log into it directly once, and enable both Photos and Photo Gallery for it.
+Editors switch through the Nextcloud profile menu, manage albums and return to their personal account. The gallery’s global configuration remains in the administration settings.
+
+To enable this, configure **Gallery account for account switching** (**Galeriekonto für den Kontowechsel**), activate **Restrict to selected accounts or groups** (**Nur für ausgewählte Konten oder Gruppen**), and list the permitted users or groups. Use an active account without administration rights, log into it directly once, and enable both Photos and Photo Gallery for it.
 
 The switch applies to the entire Nextcloud browser session, including other tabs and apps. Server-side file encryption is not supported for this feature. The app stores no shared-account password.
 
