@@ -23,7 +23,7 @@ After exploring options in the Nextcloud ecosystem, we chose to build directly o
 - Configurable titles, colours, backgrounds, footer and heading font.
 - RSS and Atom feeds, link preview metadata and an `?embed=1` view that hides the header and visible page heading.
 
-Video playback depends on browser support for the original format; the app does not transcode videos.
+Video playback depends on browser support for the original format; the app deliberately does not transcode videos.
 
 ## Requirements and setup
 
