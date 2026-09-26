@@ -1,3 +1,4 @@
+/*! SPDX-FileCopyrightText: 2026 Stephan Rickauer */
 /* SPDX-License-Identifier: AGPL-3.0-only */
 /* Entries, icons, focus and dark-mode styling are provided by Nextcloud. */
 #photo-gallery-account-switch[aria-busy="true"]{opacity:.6;cursor:wait}

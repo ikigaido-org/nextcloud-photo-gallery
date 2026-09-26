@@ -1,4 +1,5 @@
 <?php
+// SPDX-FileCopyrightText: 2026 Stephan Rickauer
 // SPDX-License-Identifier: AGPL-3.0-only
 ?>
 <link rel="stylesheet" href="<?php p($_['cssUrl']); ?>">

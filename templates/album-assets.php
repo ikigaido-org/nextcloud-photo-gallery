@@ -1,4 +1,5 @@
-<?php // SPDX-License-Identifier: AGPL-3.0-only ?>
+<?php // SPDX-FileCopyrightText: 2026 Stephan Rickauer
+// SPDX-License-Identifier: AGPL-3.0-only ?>
 <link rel="stylesheet" href="<?php p($_['cssUrl']); ?>">
 <link rel="stylesheet" href="<?php p($_['assetBase'].'vendor/lightgallery/css/lightgallery-bundle.css'); ?>">
 <link rel="stylesheet" href="<?php p($_['assetBase'].'css/album.css?v=0.8.7'); ?>">

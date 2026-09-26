@@ -1,3 +1,4 @@
+/*! SPDX-FileCopyrightText: 2026 Stephan Rickauer */
 /* SPDX-License-Identifier: AGPL-3.0-only */
 const DAV='DAV:', OC='http://owncloud.org/ns';
 export const xmlEscape=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
