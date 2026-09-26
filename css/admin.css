@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+.mpi-settings { max-width: 780px; }
+.mpi-settings p { margin: 12px 0; line-height: 1.6; }
+.mpi-settings form > label:not(.mpi-check) { display: block; margin: 18px 0 6px; font-weight: 600; }
+.mpi-settings input[type=text], .mpi-settings textarea, .mpi-settings select { display: block; width: min(100%, 640px); box-sizing: border-box; }
+.mpi-settings textarea { resize: vertical; }
+.mpi-settings .mpi-check { display: flex; align-items: center; gap: 8px; margin-top: 22px; }
+.mpi-settings button { display: block; margin-top: 22px; }
+.mpi-settings .mpi-hint { opacity: .8; font-size: 13px; }
+.mpi-settings .mpi-url { overflow-wrap: anywhere; font-family: monospace; }
+.mpi-settings .mpi-warning { padding: 12px; border-left: 4px solid #d58b20; }
+.mpi-settings input[type=url] { width: min(100%, 640px); box-sizing: border-box; }
+.mpi-appearance { border: 1px solid var(--color-border, #ddd); padding: 20px; margin: 28px 0 0; border-radius: 8px; min-width: 0; }
+.mpi-appearance legend { padding: 0 8px; font-weight: 600; }
+.mpi-appearance > label:not(.mpi-check), .mpi-appearance > div > label { display: block; margin: 16px 0 6px; }
+.mpi-colors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 20px 0; }
+.mpi-appearance .mpi-colors > label { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0; }
+.mpi-colors input[type=color] { width: 56px; height: 38px; padding: 3px; flex-shrink: 0; cursor: pointer; }
+.mpi-settings [hidden] { display: none !important; }
+@media (max-width: 600px) { .mpi-colors { grid-template-columns: 1fr; } .mpi-appearance { padding: 14px; } }
+.mpi-color-row { min-width: 0; }
+.mpi-color-row > label { display: block; margin-bottom: 6px; }
+.mpi-color-controls { display: flex; align-items: center; gap: 8px; }
+.mpi-settings .mpi-color-controls input.mpi-hex { width: 110px; min-width: 0; font-family: monospace; }
+.mpi-hex:invalid { border-color: #b42318; }
+
+.pg-cover-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:10px;margin:16px 0;max-width:720px}.pg-cover-grid button{padding:0;aspect-ratio:1;overflow:hidden;border:3px solid transparent;border-radius:8px}.pg-cover-grid button[aria-pressed="true"]{border-color:var(--color-primary,#8e2650)}.pg-cover-grid img{width:100%;height:100%;object-fit:cover}.mpi-cover-settings{margin:30px 0}.mpi-cover-settings select{max-width:100%}
+
+.mpi-settings .mpi-metadata-settings .mpi-check{margin:0;min-height:30px;gap:8px;padding:2px 0}.mpi-settings .mpi-metadata-settings input[type=checkbox]{margin:0;flex:none}.mpi-metadata-settings .mpi-hint{margin-bottom:12px}

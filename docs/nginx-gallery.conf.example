@@ -1,0 +1,56 @@
+# EXAMPLE ONLY. Install on a server YOU control, not inside Storage Share.
+# Adapt certificate filenames and CA bundle path. Requires a modern nginx.
+server {
+    listen 443 ssl;
+    server_name gallery.example.org;
+    ssl_certificate /etc/letsencrypt/live/gallery.example.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gallery.example.org/privkey.pem;
+
+    proxy_set_header Host cloud.example.org;
+    proxy_ssl_server_name on;
+    proxy_ssl_name cloud.example.org;
+    proxy_ssl_verify on;
+    proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+    # This host serves public content only; never forward a login session.
+    proxy_set_header Cookie "";
+    proxy_set_header Authorization "";
+    proxy_hide_header Set-Cookie;
+    proxy_set_header Accept-Encoding "";
+    proxy_set_header Range $http_range;
+    proxy_set_header If-Range $http_if_range;
+    proxy_buffering off;
+    proxy_cache off;
+    proxy_read_timeout 300s;
+    proxy_redirect off;
+
+    location = / {
+        limit_except GET HEAD { deny all; }
+        proxy_pass https://cloud.example.org/apps/photo_gallery/;
+    }
+    # Explicit public application routes. No settings/write endpoints.
+    location ~ "^/(?:index\.php/)?apps/photo_gallery/(?:feed\.(?:rss|atom)|api/v1/albums/[0-9]+|media/[0-9]+/[0-9]+/(?:preview|stream|metadata)|album/[0-9]+|a/[a-z0-9-]+|)$" {
+        limit_except GET HEAD { deny all; }
+        proxy_pass https://cloud.example.org;
+    }
+    # Paths returned by the existing Nextcloud installation (custom_apps there).
+    location ~ "^/(?:custom_apps|apps)/photo_gallery/(?:css|js|fonts|img|vendor)/.+\.(?:css|js|svg|woff2?|ttf|gif|png|jpe?g|webp)$" {
+        limit_except GET HEAD { deny all; }
+        proxy_pass https://cloud.example.org;
+    }
+    # Global Nextcloud theme image and bundled theme background.
+    location ~ "^/(?:index\.php/)?apps/theming/(?:image/(?:background|logo)|img/background/[^/]+)$" {
+        limit_except GET HEAD { deny all; }
+        proxy_pass https://cloud.example.org;
+    }
+    # Optional public background file links from this Nextcloud.
+    location ~ "^/(?:index\.php/)?s/[A-Za-z0-9]{6,128}/download$" {
+        limit_except GET HEAD { deny all; }
+        proxy_pass https://cloud.example.org;
+    }
+    location ~ "^/([a-z0-9-]+)$" {
+        limit_except GET HEAD { deny all; }
+        rewrite ^/([a-z0-9-]+)$ /apps/photo_gallery/a/$1 break;
+        proxy_pass https://cloud.example.org;
+    }
+    location / { return 404; }
+}

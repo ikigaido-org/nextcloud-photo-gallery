@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@nextcloud/auth": "2.6.0",
+    "@nextcloud/files": "4.0.0",
+    "@nextcloud/router": "3.1.0",
+    "esbuild": "0.25.12",
+    "@nextcloud/initial-state": "3.0.0"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "esbuild files-albums.mjs account-switcher.mjs --bundle --format=iife --target=es2022 --minify --legal-comments=eof --outdir=../js"
+  }
+}

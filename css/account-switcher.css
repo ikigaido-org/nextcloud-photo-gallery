@@ -1,0 +1,4 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Entries, icons, focus and dark-mode styling are provided by Nextcloud. */
+#photo-gallery-account-switch[aria-busy="true"]{opacity:.6;cursor:wait}
+.pg-switch-message{display:block;box-sizing:border-box;max-width:100%;padding:8px 16px 12px;color:var(--color-main-text);font-size:13px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
