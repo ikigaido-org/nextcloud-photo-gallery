@@ -1,6 +1,6 @@
 # Packaging and releases
 
-The Tests workflow runs PHP checks and creates an AppDrop ZIP on pull requests, pushes to `main`, version tags and manual runs. No Nextcloud server or JavaScript rebuild is required; the package uses the committed prebuilt JavaScript.
+The **Tests** workflow runs PHP checks and creates an AppDrop ZIP automatically on pull requests and pushes to `main`. The separate **Release** workflow runs manually or when a version tag is pushed, reusing those same checks and packaging steps before creating a draft release. No Nextcloud server or JavaScript rebuild is required; the package uses the committed prebuilt JavaScript.
 
 ## Test a package
 
@@ -11,7 +11,7 @@ Artifacts are kept for seven days. Pull requests and ordinary pushes to `main` d
 ## Create a release in the GitHub website
 
 1. Set the version in `appinfo/info.xml` through a PR and merge it after checks pass. The current version is `0.8.7`.
-2. Open **Actions → Tests → Run workflow**, select **main**, and click **Run workflow**.
+2. Open **Actions → Release → Run workflow**, select **main**, and click **Run workflow**.
 3. CI runs the checks and packages the ZIP. It creates the matching version tag (for example `v0.8.7`) at the exact commit tested, then creates a **draft release** with the ZIP attached.
 4. Open **Releases** and the draft. Download the attached ZIP and test it with AppDrop.
 5. Edit the draft, review the release notes and click **Publish release** when ready.
