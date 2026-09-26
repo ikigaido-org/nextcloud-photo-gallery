@@ -17,3 +17,7 @@ Remove passwords, access tokens and personal data from examples and logs.
 ## Handling reports
 
 We will review reports and use the private report to discuss findings and coordinate any fix and public disclosure. Please give us an opportunity to investigate before publishing vulnerability details. Let us know whether and how you would like to be credited.
+
+## Voluntary contributions and bounties
+
+Ikigaido is a non-profit organization with limited resources. We are sorry that we cannot offer monetary bounties or financial rewards for vulnerability reports. We greatly appreciate security researchers and ethical hackers who volunteer their time and expertise to help make this project safer.
