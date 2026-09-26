@@ -1,5 +1,10 @@
 # Photo Gallery
 
+[![Tests](https://github.com/ikigaido-org/nextcloud-photo-gallery/actions/workflows/tests.yml/badge.svg?branch=main&event=push)](https://github.com/ikigaido-org/nextcloud-photo-gallery/actions/workflows/tests.yml)
+[![Latest release](https://img.shields.io/github/v/release/ikigaido-org/nextcloud-photo-gallery)](https://github.com/ikigaido-org/nextcloud-photo-gallery/releases/latest)
+[![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
+[![Non-profit: volunteer maintained](https://img.shields.io/badge/non--profit-volunteer%20maintained-blue)](#project-scope-and-contributions)
+
 A public photo album overview for Nextcloud, built on Nextcloud Photos.
 
 Photo Gallery brings publicly shared Photos albums together on one page, with year and location filters and individual album pages for browsing photos and videos.
@@ -56,11 +61,17 @@ The regular Nextcloud URL works without an additional proxy. For a separate gall
 
 ## Project scope and contributions
 
+[Ikigaido](https://ikigaido.ch) is a non-profit association. We develop and maintain Photo Gallery in our free time. Contributions of code, documentation, testing and security research are welcome.
+
 This app primarily serves our association’s needs, and we intend to keep developing the features we use. Bug reports and feature requests are welcome. Small, focused contributions that also help our workflow are especially welcome.
 
 The scope is deliberately limited: we do not aim to cover every gallery use case. Please open an issue before starting a substantial change so we can discuss whether it fits.
 
 JavaScript build instructions are in [src/README.md](src/README.md).
+
+## Security
+
+Please [report vulnerabilities privately](https://github.com/ikigaido-org/nextcloud-photo-gallery/security/advisories/new). See our [security policy](SECURITY.md) for scope, safe testing and coordinated disclosure.
 
 ## License
 
